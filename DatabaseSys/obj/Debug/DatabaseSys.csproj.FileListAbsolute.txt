@@ -1,0 +1,11 @@
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\bin\Debug\DatabaseSys.exe.config
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\bin\Debug\DatabaseSys.exe
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\bin\Debug\DatabaseSys.pdb
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.csproj.AssemblyReference.cache
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.Form1.resources
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.Properties.Resources.resources
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.csproj.GenerateResource.cache
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.csproj.CoreCompileInputs.cache
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.exe
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.pdb
+C:\Users\Adrian.DESKTOP-ATDS9TK\source\repos\DatabaseSys\DatabaseSys\obj\Debug\DatabaseSys.Form2.resources
