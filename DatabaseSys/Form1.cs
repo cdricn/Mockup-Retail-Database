@@ -65,14 +65,6 @@ namespace DatabaseSys
             {
 
             }
-            try
-            {
-                SqlConnQuery($"CREATE TABLE TempTableSeTrans(ItemID float, ItemName nvarchar(255), Price float, Count int, TotalPrice float);"); //Service Table
-            }
-            catch
-            {
-
-            }
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
