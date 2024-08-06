@@ -33,6 +33,7 @@ namespace DatabaseSys
             this.label_F1Header = new System.Windows.Forms.Label();
             this.groupBox_Customer = new System.Windows.Forms.GroupBox();
             this.label_CEmptyQueryWarning = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox_CustomerDetails = new System.Windows.Forms.GroupBox();
             this.dataGridView_CTransactionHistory = new System.Windows.Forms.DataGridView();
             this.label_CDHistory = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@ namespace DatabaseSys
             this.label_CDAddress = new System.Windows.Forms.Label();
             this.label_CDetailsName = new System.Windows.Forms.Label();
             this.label_CDName = new System.Windows.Forms.Label();
+            this.labelTEST = new System.Windows.Forms.Label();
             this.button_ProceedCForm = new System.Windows.Forms.Button();
             this.groupBox_CExistingCustomers = new System.Windows.Forms.GroupBox();
             this.button_CClearDetails = new System.Windows.Forms.Button();
@@ -129,8 +131,6 @@ namespace DatabaseSys
             this.aDV_DBDataSet = new DatabaseSys.ADV_DBDataSet();
             this.tBCustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tB_CustomersTableAdapter = new DatabaseSys.ADV_DBDataSetTableAdapters.TB_CustomersTableAdapter();
-            this.labelTEST = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label_DateTime = new System.Windows.Forms.Label();
             this.groupBox_Customer.SuspendLayout();
             this.groupBox_CustomerDetails.SuspendLayout();
@@ -166,13 +166,11 @@ namespace DatabaseSys
             // groupBox_Customer
             // 
             this.groupBox_Customer.Controls.Add(this.label_CEmptyQueryWarning);
-            this.groupBox_Customer.Controls.Add(this.label4);
             this.groupBox_Customer.Controls.Add(this.groupBox_CustomerDetails);
-            this.groupBox_Customer.Controls.Add(this.labelTEST);
             this.groupBox_Customer.Controls.Add(this.button_ProceedCForm);
             this.groupBox_Customer.Controls.Add(this.groupBox_CExistingCustomers);
             this.groupBox_Customer.Controls.Add(this.groupBox_CCreateCustomer);
-            this.groupBox_Customer.Location = new System.Drawing.Point(519, 610);
+            this.groupBox_Customer.Location = new System.Drawing.Point(18, 97);
             this.groupBox_Customer.Name = "groupBox_Customer";
             this.groupBox_Customer.Size = new System.Drawing.Size(910, 502);
             this.groupBox_Customer.TabIndex = 17;
@@ -190,6 +188,16 @@ namespace DatabaseSys
             this.label_CEmptyQueryWarning.TabIndex = 38;
             this.label_CEmptyQueryWarning.Text = "Missing Customer Details";
             this.label_CEmptyQueryWarning.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(18, 646);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 13);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Label for Testing Service";
             // 
             // groupBox_CustomerDetails
             // 
@@ -299,6 +307,16 @@ namespace DatabaseSys
             this.label_CDName.Size = new System.Drawing.Size(38, 13);
             this.label_CDName.TabIndex = 0;
             this.label_CDName.Text = "Name:";
+            // 
+            // labelTEST
+            // 
+            this.labelTEST.AutoSize = true;
+            this.labelTEST.ForeColor = System.Drawing.Color.Red;
+            this.labelTEST.Location = new System.Drawing.Point(18, 659);
+            this.labelTEST.Name = "labelTEST";
+            this.labelTEST.Size = new System.Drawing.Size(86, 13);
+            this.labelTEST.TabIndex = 38;
+            this.labelTEST.Text = "Label for Testing";
             // 
             // button_ProceedCForm
             // 
@@ -499,7 +517,7 @@ namespace DatabaseSys
             // button_ServiceForm
             // 
             this.button_ServiceForm.Font = new System.Drawing.Font("Arial", 12F);
-            this.button_ServiceForm.Location = new System.Drawing.Point(235, 49);
+            this.button_ServiceForm.Location = new System.Drawing.Point(285, 49);
             this.button_ServiceForm.Name = "button_ServiceForm";
             this.button_ServiceForm.Size = new System.Drawing.Size(131, 30);
             this.button_ServiceForm.TabIndex = 2;
@@ -510,7 +528,7 @@ namespace DatabaseSys
             // button_SalesForm
             // 
             this.button_SalesForm.Font = new System.Drawing.Font("Arial", 12F);
-            this.button_SalesForm.Location = new System.Drawing.Point(372, 49);
+            this.button_SalesForm.Location = new System.Drawing.Point(422, 49);
             this.button_SalesForm.Name = "button_SalesForm";
             this.button_SalesForm.Size = new System.Drawing.Size(131, 30);
             this.button_SalesForm.TabIndex = 1;
@@ -543,7 +561,7 @@ namespace DatabaseSys
             this.groupBox_Sales.Controls.Add(this.label_SItemName);
             this.groupBox_Sales.Controls.Add(this.textBox_SItemSearch);
             this.groupBox_Sales.Controls.Add(this.label_SSearch);
-            this.groupBox_Sales.Location = new System.Drawing.Point(12, 98);
+            this.groupBox_Sales.Location = new System.Drawing.Point(661, 646);
             this.groupBox_Sales.Name = "groupBox_Sales";
             this.groupBox_Sales.Size = new System.Drawing.Size(430, 508);
             this.groupBox_Sales.TabIndex = 19;
@@ -795,7 +813,7 @@ namespace DatabaseSys
             this.groupBox_Service.Controls.Add(this.button_SeFinish);
             this.groupBox_Service.Controls.Add(this.richTextBox_SeRepairDetailsTextBox);
             this.groupBox_Service.Controls.Add(this.label_SeRepairDetails);
-            this.groupBox_Service.Location = new System.Drawing.Point(17, 612);
+            this.groupBox_Service.Location = new System.Drawing.Point(82, 660);
             this.groupBox_Service.Name = "groupBox_Service";
             this.groupBox_Service.Size = new System.Drawing.Size(463, 508);
             this.groupBox_Service.TabIndex = 22;
@@ -1036,7 +1054,7 @@ namespace DatabaseSys
             this.groupBox_Transaction.Controls.Add(this.button_TProcess);
             this.groupBox_Transaction.Controls.Add(this.button_TRemove);
             this.groupBox_Transaction.Controls.Add(this.button_TClear);
-            this.groupBox_Transaction.Location = new System.Drawing.Point(485, 96);
+            this.groupBox_Transaction.Location = new System.Drawing.Point(419, 651);
             this.groupBox_Transaction.Name = "groupBox_Transaction";
             this.groupBox_Transaction.Size = new System.Drawing.Size(427, 508);
             this.groupBox_Transaction.TabIndex = 0;
@@ -1142,7 +1160,7 @@ namespace DatabaseSys
             // button_ReturnToFirstPage
             // 
             this.button_ReturnToFirstPage.Font = new System.Drawing.Font("Arial", 12F);
-            this.button_ReturnToFirstPage.Location = new System.Drawing.Point(509, 49);
+            this.button_ReturnToFirstPage.Location = new System.Drawing.Point(559, 49);
             this.button_ReturnToFirstPage.Name = "button_ReturnToFirstPage";
             this.button_ReturnToFirstPage.Size = new System.Drawing.Size(131, 30);
             this.button_ReturnToFirstPage.TabIndex = 38;
@@ -1164,26 +1182,6 @@ namespace DatabaseSys
             // 
             this.tB_CustomersTableAdapter.ClearBeforeFill = true;
             // 
-            // labelTEST
-            // 
-            this.labelTEST.AutoSize = true;
-            this.labelTEST.ForeColor = System.Drawing.Color.Red;
-            this.labelTEST.Location = new System.Drawing.Point(10, 480);
-            this.labelTEST.Name = "labelTEST";
-            this.labelTEST.Size = new System.Drawing.Size(86, 13);
-            this.labelTEST.TabIndex = 38;
-            this.labelTEST.Text = "Label for Testing";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(10, 467);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 13);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "Label for Testing Service";
-            // 
             // label_DateTime
             // 
             this.label_DateTime.AutoSize = true;
@@ -1198,9 +1196,11 @@ namespace DatabaseSys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 623);
+            this.ClientSize = new System.Drawing.Size(940, 609);
             this.Controls.Add(this.label_DateTime);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button_ReturnToFirstPage);
+            this.Controls.Add(this.labelTEST);
             this.Controls.Add(this.groupBox_Transaction);
             this.Controls.Add(this.groupBox_Sales);
             this.Controls.Add(this.groupBox_Service);

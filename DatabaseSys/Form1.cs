@@ -18,13 +18,14 @@ namespace DatabaseSys
         string ServiceSaveQuery; // Save service query for receiving jobs
         string ServiceFinishQuery; // Finish service query for finished jobs
         public TextBox textBox1;
-        String CustID = "";
+        string CustID = "";
+        string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
 
         public Form1()
         {
             InitializeComponent();
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
+            //Form2 f2 = new Form2();
+            //f2.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,18 +53,18 @@ namespace DatabaseSys
             {
                 SqlConnQuery($"CREATE TABLE TempTable(ItemID float, ItemName nvarchar(255), Price float, Count int, TotalPrice float);"); //Sales Table
             }
-            catch
+            catch (Exception error)
             {
-
+                System.Console.WriteLine("Sales Table create query error: " + error.ToString());
             }
             // Temp Table for Sales & Service Transaction
             try
             {
                 SqlConnQuery($"CREATE TABLE TempTableSTrans(ItemID float, ItemName nvarchar(255), Price float, Count int, TotalPrice float);"); //Service Table
             }
-            catch
+            catch (Exception error)
             {
-
+                System.Console.WriteLine("Service Table create query error: " + error.ToString());
             }
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -629,7 +630,7 @@ namespace DatabaseSys
         {
             String ID = "OrderID";
             // Create a connection to the database.
-            string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true;MultipleActiveResultSets=true";
+            //string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true;MultipleActiveResultSets=true";
             SqlConnection cnn = new SqlConnection(connectionString);
 
             cnn.Open();
@@ -665,7 +666,7 @@ namespace DatabaseSys
         // Sql Connection Function for queries
         private void SqlConnQuery(String query)
         {
-            string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
+            //string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 cnn.Open();
@@ -680,7 +681,7 @@ namespace DatabaseSys
             double sum = 0;
             try
             {
-                string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
+                //string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
                 SqlConnection cnn = new SqlConnection(connectionString);
 
                 cnn.Open();
@@ -698,7 +699,7 @@ namespace DatabaseSys
         // Sql Connection to get ID
         private String SqlConnQueryReturn(String query, String ID)
         {
-            string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
+            //string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 cnn.Open();
@@ -718,15 +719,23 @@ namespace DatabaseSys
         // Sql Connection Function for Data Tables
         private void SqlConnQuery_DataTable(String query, DataGridView dataGridView)
         {
-            string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
+            //string connectionString = @"Data Source=DESKTOP-ATDS9TK;Initial Catalog=ADV_DB;Integrated Security=true";
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
-                cnn.Open();
-                SqlDataAdapter sda = new SqlDataAdapter(query, cnn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                dataGridView.DataSource = dt;
-                cnn.Close();
+                try
+                {
+                    cnn.Open();
+                    SqlDataAdapter sda = new SqlDataAdapter(query, cnn);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    dataGridView.DataSource = dt;
+                    cnn.Close();
+                }
+                catch (Exception error)
+                {
+                    Console.WriteLine("Could not connect to the database server: " + error.ToString());
+                    Console.WriteLine("Check if SQL Server is running");
+                }
             }
         }
 

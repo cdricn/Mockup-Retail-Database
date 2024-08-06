@@ -22,11 +22,7 @@ namespace DatabaseSys
             this.Hide();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // Disables close button
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {

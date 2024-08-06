@@ -107,7 +107,6 @@ namespace DatabaseSys
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
