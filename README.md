@@ -1,4 +1,4 @@
-# Mockup Retail Database
+# Mockup Retail Database Application
 
 A Mockup Database of a retail store made for an advanced relational database project.
 
