@@ -1,10 +1,8 @@
-# Mockup Retail Database Application
+# POS Inventory Management System
 
-A Mockup Database of a retail store made for an advanced relational database project.
+A point of sales system with an inventory management system of a retail store made for an advanced relational database project to emulate service and sales transactions.
 
 ## Usage
-The mockup is a program for a retail store with service and sales transaction. It can connect to an SQL server database, add customers, find existing ones, and create or log service and sales transactions.
-
 To use the program, open the .sln in Visual Studio to build. If you want to try using your database, open Form1.cs and change the Data Source to the name of your server and Initial Catalog to your specified database.
 ```csharp
 public partial class Form1 : Form
